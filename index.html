@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Universo Literário</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel+Decorative:wght@400;700&family=IM+Fell+English:ital@0;1&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="bg-letters">
+  <div class="bg-letter" style="top:5%;left:3%;animation-delay:0s">L</div>
+  <div class="bg-letter" style="top:20%;left:88%;animation-delay:3s">i</div>
+  <div class="bg-letter" style="top:60%;left:5%;animation-delay:6s">t</div>
+  <div class="bg-letter" style="top:75%;left:90%;animation-delay:1.5s">e</div>
+  <div class="bg-letter" style="top:40%;left:92%;animation-delay:4.5s">r</div>
+  <div class="bg-letter" style="top:85%;left:15%;animation-delay:2s">a</div>
+  <div class="bg-letter" style="top:10%;left:45%;animation-delay:7s">✦</div>
+</div>
+
+<div id="magic-overlay"></div>
+
+<div id="scene">
+  <div class="scene-title">✦ Universo Literário ✦</div>
+  <span class="splash-quill">🪶</span>
+  <div id="closed-book" onclick="openBook()">
+    <div class="book-3d">
+      <div class="book-spine"></div>
+      <div class="book-cover">
+        <div class="cover-ornament">✦</div>
+        <div class="cover-frame">
+          <div class="cover-title">Semana<br>Paulo Freire</div>
+          <div class="cover-subtitle">Universo Literário • 2026</div>
+        </div>
+        <div class="cover-year">2026</div>
+      </div>
+      <div class="book-pages-edge"></div>
+    </div>
+  </div>
+  <div class="click-hint">— clique para abrir as pontuações —</div>
+</div>
+
+<div id="open-book">
+  <div class="book-open-container">
+    <div class="book-nav">
+      <button class="nav-btn" id="btn-prev" onclick="changePage(-1)">← Voltar</button>
+      <div class="page-indicator" id="page-indicator"></div>
+      <button class="nav-btn" id="btn-next" onclick="changePage(1)">Próximo →</button>
+    </div>
+
+    <!-- SPREAD 0: SPF (esquerda) + PÓDIO (direita) -->
+    <div class="spread active" id="spread-0">
+      <div class="book-open-wrap">
+        <div class="page-left page-centered" id="pg-0A">
+          <div class="podium-title">Pódio Geral</div>
+          <div class="podium-update-label">Atualizado dia 28/04/2026</div>
+          <div class="podium-wrap" id="podium-display"></div>
+          <div class="podium-note">✦ Pontuação atualizada diariamente ✦</div>
+          <div class="page-num">01</div>
+        </div>
+
+        <div class="page-right" id="pg-0B">
+          <div class="spf-page">
+            <div class="spf-icon">🪶</div>
+            <div class="spf-title">Semana Paulo Freire</div>
+            <div class="page-body">
+              <p>Em 2026, o Universo Literário toma conta da ETEC MCM. Cada sala se transforma em um mundo, personagens ganham vida e histórias deixam de ser apenas lidas para serem vividas. Ao longo da semana, atividades e arrecadações solidárias reforçam a união entre os alunos, em uma experiência marcada por criatividade, expressão e competição.</p>
+            </div>
+            <div class="spf-year-badge">SPF 2026</div>
+            <div class="spf-ornament-center" style="margin-top:8px">✦ ✦ ✦</div>
+          </div>
+          <div class="page-num" style="text-align:right">02</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SPREAD 1: salas 1° e 2° -->
+    <div class="spread" id="spread-1">
+      <div class="book-open-wrap">
+        <div class="page-left" id="pg-1A">
+          <div class="sala-header">
+            <img class="sala-mascot-big" src="img/mascote2f.png" alt="2°F" onerror="this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Ctext%20y%3D%221em%22%20font-size%3D%2270%22%3E🦅%3C%2Ftext%3E%3C%2Fsvg%3E'">
+            <div class="sala-title">2° Ano F</div>
+            <div class="sala-place">1° lugar</div>
+            <div class="sala-theme">Percy Jackson</div>
+            <div class="sala-divider">✦ ✦ ✦</div>
+            <span class="theme-badge badge-percy">Rick Riordan</span>
+          </div>
+          <div class="page-body">
+            <p>Pegasus corta os céus do Olimpo, mas no 2°F ninguém precisa de asas para se elevar.</p>
+            <p>Aqui, filhos dos deuses não esperam destino, eles o dominam.</p>
+          </div>
+          <div class="page-num">03</div>
+        </div>
+        <div class="page-right" id="pg-1B">
+          <div class="sala-header"> 
+            <img class="sala-mascot-big" src="img/mascote1i.png" alt="1°I" onerror="this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Ctext%20y%3D%221em%22%20font-size%3D%2270%22%3E🐱%3C%2Ftext%3E%3C%2Fsvg%3E'">
+            <div class="sala-title">1° Ano I</div>
+            <div class="sala-place">2° lugar</div>
+            <div class="sala-theme">Alice no País das Maravilhas</div>
+            <div class="sala-divider">✦ ✦ ✦</div>
+            <span class="theme-badge badge-alice">Lewis Carroll</span>
+          </div>
+          <div class="page-body">
+            <p>Segue o gato de Cheshire pela toca do coelho e descubra que "todos aqui somos loucos".</p>
+            <p>No 1°I, o impossível não assusta, ele faz parte da jornada.</p>
+          </div>
+          <div class="page-num" style="text-align:right">04</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SPREAD 2: salas 3° e 4° -->
+    <div class="spread" id="spread-2">
+      <div class="book-open-wrap">
+        <div class="page-left" id="pg-2A">
+          <div class="sala-header">
+            <img class="sala-mascot-big" src="img/mascote2i.png" alt="2°I" onerror="this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Ctext%20y%3D%221em%22%20font-size%3D%2270%22%3E🔥%3C%2Ftext%3E%3C%2Fsvg%3E'">
+            <div class="sala-title">2° Ano I</div>
+            <div class="sala-place">3° lugar</div>
+            <div class="sala-theme">Jogos Vorazes</div>
+            <div class="sala-divider">✦ ✦ ✦</div>
+            <span class="theme-badge badge-hunger">Suzanne Collins</span>
+          </div>
+          <div class="page-body">
+            <p>“Que os jogos comecem” ficou no passado.</p>
+            <p>No 2°I, o tordo já cantou — a revolução não é anunciada, ela acontece.</p>
+          </div>
+          <div class="page-num">05</div>
+        </div>
+        <div class="page-right" id="pg-2B">
+          <div class="sala-header">
+            <img class="sala-mascot-big" src="img/mascote1f.png" alt="1°F" onerror="this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Ctext%20y%3D%221em%22%20font-size%3D%2270%22%3E🦊%3C%2Ftext%3E%3C%2Fsvg%3E'">
+            <div class="sala-title">1° Ano F</div>
+            <div class="sala-place">4° lugar</div>
+            <div class="sala-theme">O Pequeno Príncipe</div>
+            <div class="sala-divider">✦ ✦ ✦</div>
+            <span class="theme-badge badge-prince">Antoine de Saint-Exupéry</span>
+          </div>
+          <div class="page-body">
+            <p>“O essencial é invisível aos olhos.” O 1°F convida você a enxergar além do que se vê, direto do planeta B-612.</p>
+            <p>Guiados pela raposa, mostram que cada laço criado é único.</p>
+          </div>
+          <div class="page-num" style="text-align:right">06</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SPREAD 3: O GRANDE ENCONTRO (esquerda) + CONTAGEM REGRESSIVA (direita) -->
+    <div class="spread" id="spread-3">
+      <div class="book-open-wrap">
+        <div class="page-left" id="pg-3A">
+          <div class="final-page">
+            <div class="final-icon"></div>
+            <div class="final-title">O Grande Dia</div>
+            <div class="final-subtitle">Prepare-se para uma semana literária inesquecível.</div>
+            <div class="final-divider">✦ ✦ ✦ ✦ ✦</div>
+            <div class="page-body" style="text-align:center; max-width:380px;">
+              <p>Do País das Maravilhas ao Pequeno Príncipe, da Arena ao Olimpo… diferentes histórias, um único destino: a vitória.</p>
+            </div>
+            <div class="final-badge">Semana Paulo Freire · 2026</div>
+          </div>
+          <div class="page-num">07</div>
+        </div>
+        <div class="page-right" id="pg-3B">
+          <div class="countdown-container">
+            <div class="countdown-heading">Contagem Regressiva</div>
+            <div class="countdown-subtitle">O final será escrito.</div>
+            <div class="countdown-flame"></div>
+            <div class="countdown-grid">
+              <div class="countdown-unit">
+                <div class="countdown-number" id="cd-days">--</div>
+                <div class="countdown-label">Dias</div>
+              </div>
+              <div class="countdown-sep">:</div>
+              <div class="countdown-unit">
+                <div class="countdown-number" id="cd-hours">--</div>
+                <div class="countdown-label">Horas</div>
+              </div>
+              <div class="countdown-sep">:</div>
+              <div class="countdown-unit">
+                <div class="countdown-number" id="cd-mins">--</div>
+                <div class="countdown-label">Min</div>
+              </div>
+              <div class="countdown-sep">:</div>
+              <div class="countdown-unit">
+                <div class="countdown-number" id="cd-secs">--</div>
+                <div class="countdown-label">Seg</div>
+              </div>
+            </div>
+            <div class="event-date-display" id="event-date-label">15 de maio de 2026</div>
+          </div>
+          <div class="page-num" style="text-align:right">08</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<script>
+// const PODIUM_UPDATE_DAY = 'Segunda-feira';
+const PODIUM_ORDER = ['2f', '1i', '2i', '1f'];
+const PODIUM_SCORES = { '2f': '—', '1i': '—', '2i': '—', '1f': '—' };
+
+const rooms = {
+  '1f': { name:'1° Ano F', mascot:'img/mascote1f.png', },
+  '1i': { name:'1° Ano I', mascot:'img/mascote1i.png',  },
+  '2f': { name:'2° Ano F', mascot:'img/mascote2f.png',  },
+  '2i': { name:'2° Ano I', mascot:'img/mascote2i.png', },
+};
+
+const placeClass = ['p-1st','p-2nd','p-3rd','p-4th'];
+const placeLabel = ['1°','2°','3°','4°'];
+const medals     = ['','','',''];
+
+function renderPodium() {
+  const visualOrder = [1, 0, 2, 3];
+  const display = document.getElementById('podium-display');
+  const emojiMap = {'2f':'🦊','1i':'🐱','2i':'🦅','1f':'🔥'};
+  display.innerHTML = visualOrder.map(posIdx => {
+    const key = PODIUM_ORDER[posIdx];
+    const r = rooms[key];
+    const fb = encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y="1em" font-size="70">${emojiMap[key]||medals[posIdx]}</text></svg>`);
+    return `
+      <div class="podium-slot ${placeClass[posIdx]}">
+        <img class="podium-mascot-img" src="${r.mascot}" alt="${r.name}" onerror="this.src='data:image/svg+xml,${fb}'">
+        <div class="podium-name">${r.name}</div>
+        <div class="podium-score">${PODIUM_SCORES[key]}</div>
+        <div class="podium-block">
+          <div class="podium-medal">${medals[posIdx]}</div>
+          <div class="p-rank">${placeLabel[posIdx]}</div>
+        </div>
+      </div>`;
+  }).join('');
+}
+
+// spreads → páginas que cada um contém
+const PAGE_IDS = [
+  ['pg-0A','pg-0B'],   // spread 0 – SPF + pódio
+  ['pg-1A','pg-1B'],   // spread 1 – salas 1f/1i
+  ['pg-2A','pg-2B'],   // spread 2 – salas 2f/2i
+  ['pg-3A','pg-3B'],   // spread 3 – final + contagem
+];
+const TOTAL_SPREADS = 4;
+const TOTAL_MOBILE  = 8;
+const MOBILE_MAP = [
+  [0,0],  // pg-0A SPF
+  [0,1],  // pg-0B pódio
+  [1,0],  // pg-1A sala 1f
+  [1,1],  // pg-1B sala 1i
+  [2,0],  // pg-2A sala 2f
+  [2,1],  // pg-2B sala 2i
+  [3,0],  // pg-3A final
+  [3,1],  // pg-3B contagem
+];
+
+let spreadIndex = 0;
+let mobileIndex = 0;
+
+function isMobile() { return window.innerWidth <= 640; }
+
+function changePage(dir) {
+  if (isMobile()) {
+    const next = mobileIndex + dir;
+    if (next < 0) { closeBook(); return; }
+    if (next >= TOTAL_MOBILE) return;
+    mobileIndex = next;
+    spreadIndex = MOBILE_MAP[mobileIndex][0];
+    showMobilePage();
+  } else {
+    const next = spreadIndex + dir;
+    if (next < 0) { closeBook(); return; }
+    if (next >= TOTAL_SPREADS) return;
+    spreadIndex = next;
+    showSpread();
+  }
+  updateNav();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function showSpread() {
+  document.querySelectorAll('.spread').forEach((s, i) => s.classList.toggle('active', i === spreadIndex));
+  PAGE_IDS.forEach(ids => ids.forEach(id => { const el = document.getElementById(id); if (el) el.style.display = ''; }));
+}
+
+function showMobilePage() {
+  const [si, pi] = MOBILE_MAP[mobileIndex];
+  document.querySelectorAll('.spread').forEach((s, i) => s.classList.toggle('active', i === si));
+  PAGE_IDS[si].forEach((id, idx) => { const el = document.getElementById(id); if (el) el.style.display = idx === pi ? '' : 'none'; });
+}
+
+function updateNav() {
+  const mobile = isMobile();
+  const idx = mobile ? mobileIndex : spreadIndex;
+  const total = mobile ? TOTAL_MOBILE : TOTAL_SPREADS;
+  document.getElementById('btn-prev').disabled = false;
+  document.getElementById('btn-next').disabled = idx >= total - 1;
+  document.getElementById('page-indicator').textContent =
+    mobile ? `Página ${idx + 1} de ${TOTAL_MOBILE}` : `Pág ${spreadIndex + 1} e ${TOTAL_SPREADS}`;
+}
+
+window.addEventListener('resize', () => {
+  if (document.getElementById('open-book').style.display === 'none') return;
+  if (isMobile()) {
+    mobileIndex = MOBILE_MAP.findIndex(([si]) => si === spreadIndex);
+    if (mobileIndex < 0) mobileIndex = 0;
+    showMobilePage();
+  } else { showSpread(); }
+  updateNav();
+});
+
+function openBook() {
+  const overlay = document.getElementById('magic-overlay');
+  overlay.style.display = 'block';
+  const flash = document.createElement('div');
+  flash.className = 'magic-flash';
+  overlay.appendChild(flash);
+  const cx = window.innerWidth / 2, cy = window.innerHeight / 2;
+  for (let i = 0; i < 40; i++) {
+    const p = document.createElement('div');
+    p.className = 'magic-particle';
+    const angle = (Math.PI * 2 * i) / 40;
+    const dist = 80 + Math.random() * 200;
+    p.style.cssText = `left:${cx}px;top:${cy}px;width:${4+Math.random()*8}px;height:${4+Math.random()*8}px;animation-delay:${Math.random()*.3}s;background:${Math.random()>.5?'#e8c56a':'#c9952a'};`;
+    p.style.setProperty('--tx', Math.cos(angle)*dist+'px');
+    p.style.setProperty('--ty', Math.sin(angle)*dist+'px');
+    overlay.appendChild(p);
+  }
+  setTimeout(() => {
+    document.getElementById('scene').style.display = 'none';
+    document.getElementById('open-book').style.display = 'flex';
+    spreadIndex = 0; mobileIndex = 0;
+    renderPodium();
+    if (isMobile()) showMobilePage(); else showSpread();
+    updateNav();
+    overlay.style.display = 'none';
+    overlay.innerHTML = '';
+  }, 1200);
+}
+
+function closeBook() {
+  document.getElementById('open-book').style.display = 'none';
+  document.getElementById('scene').style.display = 'flex';
+  spreadIndex = 0; mobileIndex = 0;
+  document.querySelectorAll('.spread').forEach((s, i) => s.classList.toggle('active', i === 0));
+  PAGE_IDS.forEach(ids => ids.forEach(id => { const el = document.getElementById(id); if (el) el.style.display = ''; }));
+}
+
+//  CONTAGEM REGRESSIVA 
+const EVENT_DATE = new Date(2026, 4, 15, 8, 0, 0);
+function startCountdown() {
+  function tick() {
+    const diff = EVENT_DATE - new Date();
+    if (diff <= 0) {
+      ['cd-days','cd-hours','cd-mins','cd-secs'].forEach(id => document.getElementById(id).textContent = '00');
+      return;
+    }
+    document.getElementById('cd-days').textContent  = String(Math.floor(diff/86400000)).padStart(2,'0');
+    document.getElementById('cd-hours').textContent = String(Math.floor((diff%86400000)/3600000)).padStart(2,'0');
+    document.getElementById('cd-mins').textContent  = String(Math.floor((diff%3600000)/60000)).padStart(2,'0');
+    document.getElementById('cd-secs').textContent  = String(Math.floor((diff%60000)/1000)).padStart(2,'0');
+  }
+  tick();
+  setInterval(tick, 1000);
+}
+
+startCountdown();
+
+document.addEventListener('keydown', e => {
+  if (document.getElementById('open-book').style.display === 'none') return;
+  if (e.key === 'ArrowRight') changePage(1);
+  if (e.key === 'ArrowLeft')  changePage(-1);
+});
+
+let touchStartX = 0;
+document.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; });
+document.addEventListener('touchend', e => {
+  const dx = e.changedTouches[0].clientX - touchStartX;
+  if (Math.abs(dx) > 50) changePage(dx < 0 ? 1 : -1);
+});
+</script>
+</body>
+</html>
