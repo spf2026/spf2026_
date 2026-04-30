@@ -55,7 +55,7 @@
       <div class="book-open-wrap">
         <div class="page-left page-centered" id="pg-0A">
           <div class="podium-title">Pódio Geral</div>
-          <div class="podium-update-label">Atualizado dia 28/04/2026</div>
+          <div class="podium-update-label">Atualizado dia 30/04/2026</div>
           <div class="podium-wrap" id="podium-display"></div>
           <div class="podium-note">✦ Pontuação atualizada diariamente ✦</div>
           <div class="page-num">01</div>
@@ -76,7 +76,6 @@
       </div>
     </div>
 
-    <!-- SPREAD 1: salas 1° e 2° -->
     <div class="spread" id="spread-1">
       <div class="book-open-wrap">
         <div class="page-left" id="pg-1A">
@@ -96,30 +95,9 @@
         </div>
         <div class="page-right" id="pg-1B">
           <div class="sala-header"> 
-            <img class="sala-mascot-big" src="img/mascote1i.png" alt="1°I" onerror="this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Ctext%20y%3D%221em%22%20font-size%3D%2270%22%3E🐱%3C%2Ftext%3E%3C%2Fsvg%3E'">
-            <div class="sala-title">1° Ano I</div>
-            <div class="sala-place">2° lugar</div>
-            <div class="sala-theme">Alice no País das Maravilhas</div>
-            <div class="sala-divider">✦ ✦ ✦</div>
-            <span class="theme-badge badge-alice">Lewis Carroll</span>
-          </div>
-          <div class="page-body">
-            <p>Segue o gato de Cheshire pela toca do coelho e descubra que "todos aqui somos loucos".</p>
-            <p>No 1°I, o impossível não assusta, ele faz parte da jornada.</p>
-          </div>
-          <div class="page-num" style="text-align:right">04</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- SPREAD 2: salas 3° e 4° -->
-    <div class="spread" id="spread-2">
-      <div class="book-open-wrap">
-        <div class="page-left" id="pg-2A">
-          <div class="sala-header">
             <img class="sala-mascot-big" src="img/mascote2i.png" alt="2°I" onerror="this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Ctext%20y%3D%221em%22%20font-size%3D%2270%22%3E🔥%3C%2Ftext%3E%3C%2Fsvg%3E'">
             <div class="sala-title">2° Ano I</div>
-            <div class="sala-place">3° lugar</div>
+            <div class="sala-place">2° lugar</div>
             <div class="sala-theme">Jogos Vorazes</div>
             <div class="sala-divider">✦ ✦ ✦</div>
             <span class="theme-badge badge-hunger">Suzanne Collins</span>
@@ -127,6 +105,26 @@
           <div class="page-body">
             <p>“Que os jogos comecem” ficou no passado.</p>
             <p>No 2°I, o tordo já cantou — a revolução não é anunciada, ela acontece.</p>
+          </div>
+          <div class="page-num" style="text-align:right">04</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="spread" id="spread-2">
+      <div class="book-open-wrap">
+        <div class="page-left" id="pg-2A">
+          <div class="sala-header">
+            <img class="sala-mascot-big" src="img/mascote1i.png" alt="1°I" onerror="this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Ctext%20y%3D%221em%22%20font-size%3D%2270%22%3E🐱%3C%2Ftext%3E%3C%2Fsvg%3E'">
+            <div class="sala-title">1° Ano I</div>
+            <div class="sala-place">3° lugar</div>
+            <div class="sala-theme">Alice no País das Maravilhas</div>
+            <div class="sala-divider">✦ ✦ ✦</div>
+            <span class="theme-badge badge-alice">Lewis Carroll</span>
+          </div>
+          <div class="page-body">
+            <p>Segue o gato de Cheshire pela toca do coelho e descubra que "todos aqui somos loucos".</p>
+            <p>No 1°I, o impossível não assusta, ele faz parte da jornada.</p>
           </div>
           <div class="page-num">05</div>
         </div>
@@ -201,7 +199,7 @@
 </div>
 <script>
 // const PODIUM_UPDATE_DAY = 'Segunda-feira';
-const PODIUM_ORDER = ['2f', '1i', '2i', '1f'];
+const PODIUM_ORDER = ['2f', '2i', '1i', '1f'];
 const PODIUM_SCORES = { '2f': '—', '1i': '—', '2i': '—', '1f': '—' };
 
 const rooms = {
